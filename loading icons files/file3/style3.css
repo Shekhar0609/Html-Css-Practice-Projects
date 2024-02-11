@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: gray;
+    /* box-sizing: border-box; */
+}
+
+.loader {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    position: relative;
+    animation: loader 2s linear 0s infinite normal;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes loader {
+    0%{
+        transform: rotate(0deg);
+    }
+    
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loader::before{
+    content: "";
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 8px solid rgb(71, 71, 91);
+    animation: before-loader 2s linear infinite ;
+}
+
+@keyframes before-loader {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}
