@@ -1,0 +1,14 @@
+.wraper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu {
+  height: 20px;
+  width:100px;
+  background-color: gray;
+  margin: 6px 0;
+  border-radius: 10px;
+}
