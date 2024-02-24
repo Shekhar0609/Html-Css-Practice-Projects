@@ -14,7 +14,7 @@
   background-position: center;
   background-size: cover;
   min-height: 100vh;
-  animation: anime 10s infinite;
+  animation: anime 5s infinite;
 }
 
 @keyframes anime {
